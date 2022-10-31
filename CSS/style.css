@@ -1,20 +1,60 @@
+li, a, button
 body{
     width: 1024;
-    margin-right: 20px;
-    margin-left: 20px;
     display:grid; 
-    grid-template-areas: "header header"
-    "main aside "
-    "footer footer";
-    background-color: aliceblue;
-    text-decoration-color: green;
+    grid-template-areas:
+    "header"
+    "main main aside "
+    "footer aside";
+    font-family: sans-serif  
 }
+
 header{
     display: grid;
     grid-area: header;
-    grid-template-areas: "logo navbar navbar navbar";
-    background-color: darkseagreen;
+    grid-template-areas: "sitename navbar1 navbar2 navbar3 logo";
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1024;
+    margin-right: 0px;
+    margin-left: 0px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
 }
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3 ease 0s
+}
+
+.nav_links li a:hover {
+  color: #0088a9
+}
+
+button{
+  padding: 9px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0,136,169,1);
+}
+
 
 main{
     display: grid;
@@ -33,29 +73,32 @@ main{
 
 #intrHeadLine{
     grid-area: introHeadline;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(255,164,189,1);
     color: rgb(0, 0, 0)
 }
 
-#intrSubtext{
-    grid-area: introSubtext;
-    background: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-}
-#articleZone{
+
+#definition{
     grid-area: articleZone;
-    background: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
 }
 
 aside{
     grid-area: aside;
-    background-color: rgb(0, 0, 0);
-    color: rgb(0, 255, 34);
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
+    
+}
+#footer{
+  grid-area: introSubtext;
+  color: rgb(0, 0, 0);
 }
 
 footer{
     grid-area: footer;
-    background-color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
     color: rgb(0, 255, 34);
+    width: 200;
+    margin-right: 700px;
+    margin-left: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
 }
