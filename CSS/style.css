@@ -1,104 +1,151 @@
-li, a, button
-body{
-    width: 1024;
-    display:grid; 
-    grid-template-areas:
-    "header"
-    "main main aside "
-    "footer aside";
-    font-family: sans-serif  
-}
-
-header{
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: #0f172a;
+    color: white;
+  }
+  
+  main {
+    padding: 0 10rem;
     display: grid;
-    grid-area: header;
-    grid-template-areas: "sitename navbar1 navbar2 navbar3 logo";
-    justify-content: space-evenly;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  a {
+    color: whitesmoke;
+    font-weight: 500;
+  }
+  
+  a:active {
+    color: whitesmoke;
+    font-weight: 500;
+  }
+  
+  .nav {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 1024;
-    margin-right: 0px;
-    margin-left: 0px; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-}
-
-.logo{
-  cursor: pointer;
-}
-
-.nav_links {
-  list-style: none;
-}
-
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.nav_links li a {
-  transition: all 0.3 ease 0s
-}
-
-.nav_links li a:hover {
-  color: #0088a9
-}
-
-button{
-  padding: 9px 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-button:hover{
-  background-color: rgba(0,136,169,1);
-}
-
-
-main{
+    padding: 2rem 10rem;
+    border-bottom: 1px solid rgba(208, 208, 208, 0.1);
+  }
+  
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav li {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+  }
+  
+  .nav .login-button {
+    padding: 0.8rem 3rem;
+    border-radius: 2rem;
+    background-color: orangered;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    opacity: 0.8;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.2;
+    color: gray;
+    text-align: justify;
+  }
+  
+  .sub-heading {
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  
+  .heading {
+    margin-bottom: 1rem;
+  }
+  
+  .articles-section {
     display: grid;
-    grid-area: main;
-    grid-template-areas: 
-        "intrHeadline"
-        "intrSubtext"
-        "articleZone";
-    background-color: aliceblue(0, 0, 0);
-}
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+  }
+  
+  .article-img {
+    height: 40rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .side-img {
+    height: 25rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .heading-section {
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: rgba(208, 208, 208, 0.02);
+    border: 1px solid rgba(208, 208, 208, 0.1);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .button-link {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+    background-color: orangered;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+  }
 
-#logo{
-    grid-area: logo;
-    background-color: ghostwhite;
-}
+  footer{
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+    border-bottom: 1px solid rgba(208, 208, 208, 0.1);
+    color: whitesmoke;
+  }
 
-#intrHeadLine{
-    grid-area: introHeadline;
-    background-color: rgba(255,164,189,1);
-    color: rgb(0, 0, 0)
-}
+  .link-1{
+    padding: 0 10rem;
+  }
+  
+  .link-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-
-#definition{
-    grid-area: articleZone;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-}
-
-aside{
-    grid-area: aside;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-    
-}
-#footer{
-  grid-area: introSubtext;
-  color: rgb(0, 0, 0);
-}
-
-footer{
-    grid-area: footer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-    color: rgb(0, 255, 34);
-    width: 200;
-    margin-right: 700px;
-    margin-left: 100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
-}
+  .link-3{
+    padding: 0 10rem;
+  }
